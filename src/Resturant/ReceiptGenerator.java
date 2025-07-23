@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+/// ///////
 public class ReceiptGenerator {
     private List<String> orderItemsData; // יכיל את כל הנתונים של ההזמנה (קטגוריה:מספר:מרכיבים מותאמים)
     private Map<String, Map<Integer, String>> menuItemsNamesByCategory; // מפה של שמות פריטים לפי קטגוריה ומספר
