@@ -1,0 +1,12 @@
+--- Menu receipt ---
+Date and time: 2025-07-20 20:31:18
+Table number: 2
+--------------------
+1. Fucachia sticks  (Starters) - 28.00 ש"ח
+2. Side salad (Starters) - 25.00 ש"ח
+3. Ice cream (Desserts) - 20.00 ש"ח
+Total payment (without tip) is: 73.00 ש"ח
+tip: 7.30 ש"ח
+Total payment: 80.30 ש"ח
+--------------------
+Thank you for your payment! enjoy your meal :)

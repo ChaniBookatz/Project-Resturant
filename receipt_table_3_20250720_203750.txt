@@ -1,0 +1,11 @@
+--- Menu receipt ---
+Date and time: 2025-07-20 20:37:50
+Table number: 3
+--------------------
+1. Side salad (Starters) - 25.00 ש"ח
+2. Chocolate cake (Desserts) - 35.00 ש"ח
+Total payment (without tip) is: 60.00 ש"ח
+tip: 12.00 ש"ח
+Total payment: 72.00 ש"ח
+--------------------
+Thank you for your payment! enjoy your meal :)
