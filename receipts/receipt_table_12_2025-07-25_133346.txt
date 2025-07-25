@@ -1,0 +1,13 @@
+--- Receipt ---
+Date and time: 25-07-2025 133346
+Table number: 12
+--------------------------------
+Order details:
+  - Home fries (Starters): 28.00 ש"ח
+ingredients: Potato,  Sweet Potato
+--------------------------------
+Total (without tip): 28.00 ש"ח
+tip: 0.00 ש"ח
+ Total payment(with tip): 28.00 ש"ח
+--------------------------------
+Thank you for eating at us!
