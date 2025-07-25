@@ -11,3 +11,4 @@ public class MainCoursesMenu extends BaseMenuCategory {
         items.put(4, new MenuItem("Chicken Salad",60.0, Arrays.asList("Lettuce","Cherry tomato","Cucumber","Red Onion","Grilled Chicken")));
     }
 }
+

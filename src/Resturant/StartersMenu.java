@@ -10,3 +10,4 @@ public class StartersMenu extends BaseMenuCategory {
         items.put(3, new MenuItem("Focaccia sticks", 20.0, Arrays.asList(" White bread")));
     }
 }
+
