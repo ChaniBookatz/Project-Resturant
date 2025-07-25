@@ -38,8 +38,20 @@ public class Main {
                     }
                     break;
                 case "5":
-                    System.out.println("Thank you and goodbye! ");
-                    running = false; // יציאה מהלולאה הראשית
+                    if (!manager.isOrderEmpty()) { // נניח שנוסיף מתודה isOrderEmpty ל-RestaurantManager
+                        System.out.println("\n!!! אזהרה: קיימת הזמנה פתוחה ולא משולמת בשולחן " + manager.getTableNumber() + " !!!");
+                        System.out.print("האם אתה בטוח שברצונך לצאת מבלי לשלם? (כן/לא): ");
+                        String confirmExit = scanner.nextLine();
+                        if (confirmExit.equalsIgnoreCase("כן")) {
+                            System.out.println("תודה ולהתראות!");
+                            running = false;
+                        } else {
+                            System.out.println("ביטול יציאה. חוזרים לתפריט הראשי.");
+                        }
+                    } else {
+                        System.out.println("תודה ולהתראות!");
+                        running = false;
+                    }
                     break;
                 default:
                     System.out.println("Unable to process your choice. Please try again: ");

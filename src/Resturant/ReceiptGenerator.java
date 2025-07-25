@@ -8,14 +8,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-/// ///////
 public class ReceiptGenerator {
     private List<String> orderItemsData; // יכיל את כל הנתונים של ההזמנה (קטגוריה:מספר:מרכיבים מותאמים)
     private Map<String, Map<Integer, String>> menuItemsNamesByCategory; // מפה של שמות פריטים לפי קטגוריה ומספר
     private Map<String, Map<Integer, Double>> menuItemsPricesByCategory; // מפה של מחירים לפי קטגוריה ומספר
     private String tableNumber;
     private double tipAmount;
-    private double subTotal; // נוסיף שדה לשמירת הסכום לתשלום לפני טיפ
+    private double subTotal; // שדה לשמירת הסכום לתשלום לפני טיפ
 
     // בנאי מעודכן שיקבל את כל הנתונים הדרושים
     public ReceiptGenerator(List<String> orderItemsData,
@@ -39,22 +38,21 @@ public class ReceiptGenerator {
     }
 
     private void saveReceipt() {
-        String directoryPath = "receipts/";
+        String directoryPath = "receipts//";
         File directory = new File(directoryPath);
-        // Create the 'receipts' directory if it doesn't exist
         if (!directory.exists()) {
             if (!directory.mkdirs()) {
-                System.err.println("שגיאה: לא ניתן ליצור תיקיית קבלות בנתיב: " + directoryPath);
-                return; // Exit if directory creation fails
+                System.err.println("Error:unable to save invoice: " + directoryPath);
+                return;
             }
         }
 
         String filename = directoryPath + "receipt_table_" + tableNumber + "_" +
-                LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH:mm:ss")) + ".txt";
+                LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HHmmss")) + ".txt";
 
         try (FileWriter writer = new FileWriter(filename)) {
             writer.write("--- Receipt ---\n");
-            writer.write("Date and time: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss")) + "\n");
+            writer.write("Date and time: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HHmmss")) + "\n");
             writer.write("Table number: " + tableNumber + "\n");
             writer.write("--------------------------------\n");
             writer.write("Order details:\n");
@@ -153,7 +151,6 @@ public class ReceiptGenerator {
                     System.out.println("Preprocessing your card payment...");
                     System.out.printf("Card payment was successful. Payment made: %.2f ש\"ח.%n", totalAmount);
                     System.out.println("Thank you, your order has been placed! Enjoy your meal :) ");
-                    System.out.println("DEBUG: Calling saveReceipt() now...");
                     saveReceipt(); // שמירת קבלה
                     paymentCompletedSuccessfully = true;
                     paymentChoiceMade = true;
